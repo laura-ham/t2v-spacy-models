@@ -1,0 +1,7 @@
+spacy==3.0.7
+requests==2.25.1
+nltk==3.4.5
+pydantic==1.8.2
+fastapi==0.67.0
+PyYAML==5.4.1
+uvicorn==0.13.3
