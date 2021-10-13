@@ -8,9 +8,8 @@ ENV PATH="$PATH:/root/.cargo/bin"
 
 COPY requirements.txt .
 RUN pip3 install -r requirements.txt
-# RUN pip3 install https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.4.0/en_core_sci_scibert-0.4.0.tar.gz
 RUN pip3 install spacy-transformers
-RUN python3 -m spacy download en_core_web_trf
+RUN python3 -m spacy download en_core_web_lg
 
 COPY . .
 

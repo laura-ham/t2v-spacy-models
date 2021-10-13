@@ -10,8 +10,9 @@ class Vectorizer:
         self.model = model
 
     async def vectorize(self, text: str):
-        print("raw: ", text)
+        # print("raw: ", text)
         nlp_text = self.model(text)
-        print("processed: ", nlp_text)
-        print("vector: ", nlp_text._.trf_data.tensors[-1].mean(axis=0)[:10])
-        return nlp_text._.trf_data.tensors[-1].mean(axis=0)
+        # print("processed: ", nlp_text)
+        # print("length: ", len(nlp_text.vector))
+        # print("vector: ", nlp_text.vector)
+        return nlp_text.vector

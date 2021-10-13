@@ -3,14 +3,11 @@ from vectorizer import Vectorizer, VectorInput
 from meta import Meta
 import os
 import spacy
+from spacy.vectors import Vectors
 
 app = FastAPI()
 
-# model_name = os.getenv('MODEL_NAME')
-# model = spacy.load(model_name)
-
-#model = spacy.load('en_core_sci_scibert')
-model = spacy.load('en_core_web_trf')
+model = spacy.load('en_core_web_lg')
 
 vec = Vectorizer(model)
 meta_info = Meta(model)
